@@ -3,8 +3,8 @@
 class Shakerscan < Formula
   desc "MCP adapter and Hunt CLI for a ShakerScan instance"
   homepage "https://shakerscan.com"
-  url "https://files.pythonhosted.org/packages/97/1e/af11a7afe9f23ce62bb9d950ffb89200ba24dbe6ea881235baa714407ece/shakerscan-0.6.0.tar.gz"
-  sha256 "4dbff94e9920e78952b330f8b7c10f630db866ab6275452548cc9e3727afe7ad"
+  url "https://files.pythonhosted.org/packages/cb/7e/1e27e2b36d02fb10eca34e93e0b0b612ff82e1cf0606c8215738478d1f95/shakerscan-0.7.0.tar.gz"
+  sha256 "c01d557576a06cfebb412ccdb8e5d2ec7272b8d48716cf345910bd9d47395fbd"
   license "AGPL-3.0-only"
 
   depends_on "python@3.13"
@@ -21,7 +21,7 @@ class Shakerscan < Formula
   end
 
   test do
-    assert_match "shakerscan client 0.6.0", shell_output("#{bin}/shakerscan version")
+    assert_match "shakerscan client 0.7.0", shell_output("#{bin}/shakerscan version")
     assert_match "usage: shakerscan mcp", shell_output("#{bin}/shakerscan mcp --help")
   end
 end
